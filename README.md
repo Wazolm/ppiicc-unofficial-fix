@@ -1,3 +1,5 @@
+**中文** | [English](./README.en.md)
+
 # PPIICC (Unofficial Bugfix Archive)
 
 > **非官方修改版 / Unofficial Modified Version**  
