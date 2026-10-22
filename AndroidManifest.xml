@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="bos.consoar.imagestitch" platformBuildVersionCode="31" platformBuildVersionName="12">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="bos.consoar.imagestitch.AppApplication" android:theme="@style/AppTheme">
+        <activity android:exported="true" android:launchMode="singleTask" android:name="bos.consoar.imagestitch.ui.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="bos.consoar.imagestitch.ui.activity.ViewPagerTouchImageViewActivity"/>
+        <activity android:name="bos.consoar.imagestitch.ui.activity.DoodleImageVerticalActivity"/>
+        <activity android:name="bos.consoar.imagestitch.ui.activity.DoodleImageHorizontalActivity"/>
+        <activity android:name="bos.consoar.imagestitch.ui.activity.manualmode.CropImageActivity"/>
+        <activity android:name="bos.consoar.imagestitch.ui.activity.manualmode.ManualModeActivity"/>
+        <activity android:name="bos.consoar.imagestitch.ui.activity.SettingsActivity"/>
+        <provider android:authorities="bos.consoar.imagestitch.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <activity android:name="com.zhihu.matisse.ui.MatisseActivity"/>
+        <activity android:name="com.zhihu.matisse.ui.CaptureDelegateActivity" android:theme="@style/Matisse.TransparentTheme"/>
+        <activity android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity"/>
+        <activity android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity"/>
+        <provider android:authorities="bos.consoar.imagestitch.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider"/>
+        <provider android:authorities="bos.consoar.imagestitch.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+    </application>
+</manifest>

@@ -1,0 +1,18 @@
+version: 3.0.3
+apkFileName: bos.consoar.imagestitch.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 21
+  targetSdkVersion: 31
+versionInfo:
+  versionCode: 33
+  versionName: 0.5.5
+resourcesInfo:
+  packageId: 127
+doNotCompress:
+- arsc
+- png
+- webp
+- assets/dexopt/baseline.prof
