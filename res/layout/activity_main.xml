@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar" layout="@layout/toolbar_layout" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/toolbar" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/main_stitch_setting_layout" android:background="@android:color/background_light" android:visibility="gone" android:layout_width="match_parent" android:layout_height="272.0dp" android:layout_alignParentBottom="true">
+        <ScrollView android:padding="8.0dp" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="272.0dp" android:layout_toLeftOf="@id/main_stitch_setting_button_layout">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0dp" android:id="@id/main_tolerance_slow_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="头尾区域容错等级:5" />
+                <SeekBar android:id="@id/main_tolerance_slow_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:max="10" android:progress="1" />
+                <TextView android:textSize="12.0dp" android:id="@id/main_tolerance_fast_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="内容区域容错系数:4000" />
+                <SeekBar android:id="@id/main_tolerance_fast_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:max="100" android:progress="1" />
+                <TextView android:textSize="12.0dp" android:id="@id/main_shadowHeight_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="顶部阴影深度：6DP" />
+                <TextView android:textSize="12.0dp" android:id="@id/main_shadowHeightHint_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/shadowHeight_hint" />
+                <SeekBar android:id="@id/main_shadowHeight_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="18" android:progress="1" />
+                <TextView android:textSize="12.0dp" android:id="@id/main_move_wording_area_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="台词区域占比:10" />
+                <TextView android:textSize="12.0dp" android:id="@id/main_move_wording_area_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wording_area_hint" />
+                <SeekBar android:id="@id/main_move_wording_area_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:max="30" android:progress="1" />
+                <CheckBox android:id="@id/main_move_top_bottom_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="自动去除上下黑边" />
+                <CheckBox android:id="@id/main_move_left_right_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="自动去除左右黑边" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/main_stitch_mode_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="12.0dp" android:textColor="@color/material_caption_light" android:gravity="center" android:layout_width="wrap_content" android:layout_height="36.0dp" android:text="@string/stitch_mode_label" />
+                    <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:textColor="@color/material_caption_light" android:id="@id/main_stitch_mode_button" android:layout_width="wrap_content" android:layout_height="36.0dp" android:text="长截图（纵向）" />
+                    <ImageView android:layout_width="36.0dp" android:layout_height="36.0dp" android:src="@drawable/ic_arrow_drop_down_grey600_36dp" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/main_stitch_fitwidth_mode_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="12.0dp" android:textColor="@color/material_caption_light" android:gravity="center" android:layout_width="wrap_content" android:layout_height="36.0dp" android:text="@string/stitch_fitwidth_mode_label" />
+                    <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:textColor="@color/material_caption_light" android:id="@id/main_stitch_fitwidth_mode_button" android:layout_width="wrap_content" android:layout_height="36.0dp" android:text="不缩放" />
+                    <ImageView android:layout_width="36.0dp" android:layout_height="36.0dp" android:src="@drawable/ic_arrow_drop_down_grey600_36dp" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/main_stitch_fitheight_mode_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="12.0dp" android:textColor="@color/material_caption_light" android:gravity="center" android:layout_width="wrap_content" android:layout_height="36.0dp" android:text="@string/stitch_fitheight_mode_label" />
+                    <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:textColor="@color/material_caption_light" android:id="@id/main_stitch_fitheight_mode_button" android:layout_width="wrap_content" android:layout_height="36.0dp" android:text="不缩放" />
+                    <ImageView android:layout_width="36.0dp" android:layout_height="36.0dp" android:src="@drawable/ic_arrow_drop_down_grey600_36dp" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/main_statusbar_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="12.0dp" android:textColor="@color/material_caption_light" android:gravity="center" android:layout_width="wrap_content" android:layout_height="36.0dp" android:text="@string/statusbar_label" />
+                    <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:textColor="@color/material_caption_light" android:id="@id/main_statusbar_mode_button" android:layout_width="wrap_content" android:layout_height="36.0dp" android:text="自动计算" />
+                    <ImageView android:layout_width="36.0dp" android:layout_height="36.0dp" android:src="@drawable/ic_arrow_drop_down_grey600_36dp" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/main_imagelink_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="12.0dp" android:textColor="@color/material_caption_light" android:gravity="center" android:layout_width="wrap_content" android:layout_height="36.0dp" android:text="@string/imagelink_label" />
+                    <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:textColor="@color/material_caption_light" android:id="@id/main_imagelink_button" android:layout_width="wrap_content" android:layout_height="36.0dp" android:text="前者优先" />
+                    <ImageView android:layout_width="36.0dp" android:layout_height="36.0dp" android:src="@drawable/ic_arrow_drop_down_grey600_36dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:orientation="vertical" android:id="@id/main_stitch_setting_button_layout" android:layout_width="88.0dp" android:layout_height="wrap_content" android:layout_marginRight="8.0dp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:id="@id/main_stitch_setting_save" android:layout_width="88.0dp" android:layout_height="48.0dp" android:layout_marginRight="8.0dp" android:text="@string/save" android:layout_alignParentRight="true" />
+            <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:id="@id/main_stitch_setting_cancel" android:layout_width="88.0dp" android:layout_height="48.0dp" android:layout_marginTop="8.0dp" android:layout_marginRight="8.0dp" android:text="@string/cancel" android:layout_alignParentRight="true" />
+            <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:id="@id/main_stitch_setting_preset" android:layout_width="88.0dp" android:layout_height="48.0dp" android:layout_marginTop="8.0dp" android:layout_marginRight="8.0dp" android:text="预设模式" android:layout_alignParentRight="true" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/main_result_layout" android:background="@android:color/background_light" android:padding="16.0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="272.0dp" android:layout_alignParentBottom="true">
+        <ScrollView android:id="@id/main_resultImage_layout_vertical" android:scrollbars="vertical" android:layout_width="240.0dp" android:layout_height="240.0dp" android:layout_alignParentLeft="true">
+            <ImageView android:id="@id/main_resultImage_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+        </ScrollView>
+        <HorizontalScrollView android:id="@id/main_resultImage_layout_horizontal" android:visibility="invisible" android:scrollbars="horizontal" android:layout_width="240.0dp" android:layout_height="240.0dp" android:layout_alignParentLeft="true">
+            <ImageView android:id="@id/main_resultImage_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+        </HorizontalScrollView>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="8.0dp" android:layout_marginRight="8.0dp" android:layout_toRightOf="@id/main_resultImage_layout_vertical">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+                <ImageButton android:id="@id/result_save" android:background="?selectableItemBackground" android:layout_width="48.0dp" android:layout_height="48.0dp" android:src="@drawable/ic_save_grey600_24dp" />
+                <ImageButton android:id="@id/result_cancel" android:background="?selectableItemBackground" android:layout_width="48.0dp" android:layout_height="48.0dp" android:layout_marginTop="16.0dp" android:src="@drawable/ic_delete_grey600_24dp" />
+                <ImageButton android:id="@id/result_doodle" android:background="?selectableItemBackground" android:layout_width="48.0dp" android:layout_height="48.0dp" android:layout_marginTop="16.0dp" android:src="@drawable/ic_edit_grey600_24dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView android:textSize="12.0dp" android:textColor="#4291f1" android:gravity="center" android:id="@id/progress_hint" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@id/number_progress_bar" />
+    <com.daimajia.numberprogressbar.NumberProgressBar android:id="@id/number_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" custom:progress_reached_bar_height="4.0dp" custom:progress_unreached_bar_height="2.0dp" />
+</RelativeLayout>

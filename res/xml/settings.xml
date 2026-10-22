@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:example="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/setting_other">
+        <ListPreference android:entries="@array/output_image_quality_entries" android:title="@string/other_output_image_quality_title" android:key="other_output_image_quality" android:defaultValue="0" android:entryValues="@array/output_image_quality_entries_value" />
+        <SwitchPreference android:enabled="true" android:title="@string/other_cutstatusbar_enabled_title" android:key="other_cutstatusbar_enabled" android:summary="@string/other_cutstatusbar_enabled_summary" android:defaultValue="false" />
+        <SwitchPreference android:enabled="true" android:title="@string/other_cutnavigationbar_enabled_title" android:key="other_cutnavigationbar_enabled" android:summary="@string/other_cutnavigationbar_enabled_summary" android:defaultValue="false" />
+        <SwitchPreference android:enabled="true" android:title="@string/other_simplestitch_cutstatusbarandnavigationbar_enabled_title" android:key="other_simplestitch_cutstatusbarandnavigationbar_enabled" android:summary="@string/other_simplestitch_cutstatusbarandnavigationbar_enabled_summary" android:defaultValue="false" />
+        <SwitchPreference android:enabled="true" android:title="@string/other_multithread_enabled_title" android:key="other_multithread_enabled" android:summary="@string/other_multithread_enabled_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/setting_about">
+        <Preference android:title="@string/other_version" android:key="other_version" />
+        <Preference android:title="@string/other_email" android:key="other_email" />
+    </PreferenceCategory>
+</PreferenceScreen>

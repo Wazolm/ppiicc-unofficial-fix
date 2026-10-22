@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/toolbar" layout="@layout/toolbar_layout" />
+    <bos.consoar.imagestitch.support.view.doodle.DoodleSurfaceViewVertical android:id="@id/doodle_surfaceview_vertical" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/bottom_layout" android:background="#fafafa" android:layout_width="match_parent" android:layout_height="?actionBarSize">
+        <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:textColor="@color/material_title_light" android:gravity="center" android:layout_gravity="center" android:id="@id/edit_mode_switch" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/look" android:layout_weight="1.0" />
+        <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:textColor="@color/material_title_light" android:gravity="center" android:layout_gravity="center" android:id="@id/color_picker" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/color" android:layout_weight="1.0" />
+        <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:textColor="@color/material_title_light" android:gravity="center" android:layout_gravity="center" android:id="@id/paint_picker" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/width" android:layout_weight="1.0" />
+        <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:textColor="@color/material_title_light" android:gravity="center" android:layout_gravity="center" android:id="@id/shape_picker" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/shape_picker" android:layout_weight="1.0" />
+        <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:textColor="@color/material_title_light" android:gravity="center" android:layout_gravity="center" android:id="@id/eraser_picker" android:visibility="gone" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/eraser" android:layout_weight="1.0" />
+        <bos.consoar.imagestitch.support.view.FlatButton android:textSize="12.0dp" android:textColor="@color/material_title_light" android:gravity="center" android:layout_gravity="center" android:id="@id/undo" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/undo" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

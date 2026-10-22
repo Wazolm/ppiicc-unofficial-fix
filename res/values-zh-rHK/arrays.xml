@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="image_link_priority_values">
+        <item>前者優先</item>
+        <item>後者優先</item>
+    </string-array>
+    <string-array name="output_image_quality_entries">
+        <item>高</item>
+        <item>低</item>
+    </string-array>
+    <string-array name="output_image_quality_entries_value">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="paint_size_values">
+        <item>細</item>
+        <item>中</item>
+        <item>粗</item>
+    </string-array>
+    <string-array name="paint_type_values">
+        <item>跟隨手指</item>
+        <item>直線</item>
+        <item>矩形</item>
+        <item>圓形</item>
+        <item>實心矩形</item>
+        <item>實心圓形</item>
+        <item>馬賽克</item>
+        <item>模糊</item>
+    </string-array>
+    <string-array name="preset_type_values">
+        <item>預設一(默認模式)</item>
+        <item>預設二</item>
+        <item>預設三</item>
+    </string-array>
+    <string-array name="scrollshot_height_entries">
+        <item>50%</item>
+        <item>60%</item>
+        <item>70%</item>
+        <item>80%</item>
+    </string-array>
+    <string-array name="scrollshot_height_entries_value">
+        <item>0.5</item>
+        <item>0.6</item>
+        <item>0.7</item>
+        <item>0.8</item>
+    </string-array>
+    <string-array name="scrollshot_time_entries">
+        <item>2.5秒</item>
+        <item>1秒</item>
+    </string-array>
+    <string-array name="scrollshot_time_entries_value">
+        <item>2500</item>
+        <item>1000</item>
+    </string-array>
+    <string-array name="statusbar_mode_values">
+        <item>自動計算</item>
+        <item>當前系統高度</item>
+    </string-array>
+    <string-array name="stitch_fitheight_mode_values">
+        <item>不縮放</item>
+        <item>縮放到最大高度</item>
+        <item>縮放到最小高度</item>
+    </string-array>
+    <string-array name="stitch_fitwidth_mode_values">
+        <item>不縮放</item>
+        <item>縮放到最大寬度</item>
+        <item>縮放到最小寬度</item>
+    </string-array>
+    <string-array name="stitch_mode_values">
+        <item>長截圖（自動縱向）</item>
+        <item>長截圖（手動縱向）</item>
+        <item>直接拼接（縱向）</item>
+        <item>直接拼接（橫向）</item>
+        <item>電影臺詞模式</item>
+    </string-array>
+</resources>
