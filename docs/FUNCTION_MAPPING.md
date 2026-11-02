@@ -1,3 +1,5 @@
+**中文** | [English](./FUNCTION_MAPPING_GitHub.en.md)
+
 # PPIICC 混淆函数功能对照表
 
 > 本文依据 PPIICC APK 经 apktool 反编译得到的 Smali 指令整理，旨在帮助维护者理解代码结构、定位主要功能入口。本文不是原始 Java/Kotlin 源码，也不代表恢复了开发者原本使用的方法名。
